@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Controle de IMC</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+		
+		<header>
+			<div class="container">
+				<h2 class="titulo">KL Treino Funcional</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h1>Meus Alunos</h1>
+				<label for="filtrar-tabela">Filtro:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do Aluno">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-Alunos">
+						<tr class="Aluno" id="primeiro-Aluno">
+							<td class="info-nome">Vitor Torres</td>
+							<td class="info-peso">99</td>
+							<td class="info-altura">1.82</td>
+							<td class="info-gordura">19</td>
+							<td class="info-imc">29.59 </td>
+						</tr>
+
+						<tr class="Aluno" >
+							<td class="info-nome"> </td>
+							<td class="info-peso"> </td>
+							<td class="info-altura"> </td>
+							<td class="info-gordura"> </td>
+							<td class="info-imc"> </td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os Alunos</span>
+
+				<button id="buscar-Alunos" class="botao bto-principal">Buscar Alunos</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h1 id="titulo-form">Adicionar novo Aluno</h1>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu Aluno" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="peso">Peso:</label>
+		            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu Aluno" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="altura">Altura:</label>
+		            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu Aluno" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="gordura">% de Gordura:</label>
+		            <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu Aluno" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-Aluno" class="botao bto-principal">Adicionar Aluno</button>
+				<button id="remover-Aluno" class="botao bto-principal">Remover Aluno</button>
+		    </form>
+		</section>
+
+		<script src="js/calcula-imc.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/remover-Aluno.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-Alunos.js" ></script>
+
+	</body>
+	
+</html>
